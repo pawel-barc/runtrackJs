@@ -1,0 +1,24 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+#tile-container{
+  width: 456px;
+  height: 456px;
+  display: flex;
+  flex-wrap: wrap; 
+}
+img{
+  height: 150px;
+  width: 150px;
+  border: 1px solid white;
+}
+.tile{
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  background-color: silver;
+}

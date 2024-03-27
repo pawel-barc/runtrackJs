@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arc-en-ciel</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <img class="rainbow-image" src="arc1.png" alt="Image 1">
-        <img class="rainbow-image" src="arc2.png" alt="Image 2">
-        <img class="rainbow-image" src="arc3.png" alt="Image 3">
-        <img class="rainbow-image" src="arc4.png" alt="Image 4">
-        <img class="rainbow-image" src="arc5.png" alt="Image 5">
-        <img class="rainbow-image" src="arc6.png" alt="Image 6">
-    </div>
-    <button id="shuffleButton">Mélanger</button>
-    <div id="message"></div>
+
+<div id="puzzle-container">
+  <img src="arc1.png" alt="arc1" class="rainbow" data-order="1">
+  <img src="arc2.png" alt="arc2" class="rainbow" data-order="2">
+  <img src="arc3.png" alt="arc3" class="rainbow" data-order="3">
+  <img src="arc4.png" alt="arc4" class="rainbow" data-order="4">
+  <img src="arc5.png" alt="arc5" class="rainbow" data-order="5">
+  <img src="arc6.png" alt="arc6" class="rainbow" data-order="6">
+</div>
+<button id="shuffle-btn">Melange</button>
+<div id="result"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
