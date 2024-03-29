@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Filter</title>
+</head>
+<body>
+  <form id="filterForm">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id"><br><br>
+
+    <label for="name">Nazwa:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="type">Typ:</label>
+    <select id="type" name="type">
+      <option value="">Wybierz typ</option>
+      <option value="Grass">Grass</option>
+      <option value="Fire">Fire</option>
+      <!-- Dodaj więcej opcji według potrzeb -->
+    </select><br><br>
+
+    <input type="button" value="Filtruj" onclick="filterPokemon()">
+  </form>
+
+  <div id="pokemonList">
+    <!-- Tutaj zostanie wyświetlona lista Pokemonów -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

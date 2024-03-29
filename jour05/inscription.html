@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a class="header" href="inscription.html">Inscription</a>
+                <a class="header" href="connection.html">Connection</a>
+            </div>
+        </nav>	
+        <h1>Formulaire d'inscription</h1>
+    </header> 
+    
+    <div class="donné">
+        <form id="inscriptionForm" action="#" method="post">
+            <label for="prenom">Entrez votre prénom</label>
+            <input class="L1" type="text" name="prenom" id="prenom"><br>
+            <p id="prenomError" class="err"></p>
+
+            <label for="nom">Entrez votre nom</label>
+            <input class="L1" type="text" name="nom" id="nom"><br>
+            <p id="nomError" class="err"></p>
+
+            <label for="adressepostale">Entrez votre e-mail</label>
+            <input class="L1" type="email" name="adressepostale" id="adresse" placeholder="monadresse@mail.com" required><br>
+            <p id="adresseError" class="err"></p>
+
+            <label for="adresse">Entrez votre adresse postale</label>
+            <textarea id="codepost" name="message" placeholder="Ville, Rue...." required></textarea>
+
+            <label for="codepostale">Entrez code postale</label>
+            <textarea id="message" name="message" placeholder="06210" required></textarea>
+            <p id="codepostaleError" class="err"></p>
+
+            <label for="PassW" class="labelgray">Entrez votre mot de passe</label>
+            <input type="password" name="PassW" id="PassW" required>
+            <input type="checkbox" id="showPassword"> 
+            <label for="showPassword">montre les caracteurs</label> 
+
+            <p id="passError" class="err"></p>
+            
+
+            <label for="PassWc" class="labelgray">Confirmez votre mot de passe</label>
+            <input type="password" name="PassWc" id="PassWc" required> 
+            <input type="checkbox" id="showPasswordc"> 
+            <label for="showPasswordc">montre les caracteurs</label>
+            <p id="passWcError" class="err"></p>
+
+            <button type="button" onclick="validateForm()">S'inscrire</button>	
+        </form>
+    </div>
+</body>
+</html>
