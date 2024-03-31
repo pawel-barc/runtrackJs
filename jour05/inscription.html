@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
 </head>
 <body>
@@ -28,31 +28,25 @@
             <input class="L1" type="text" name="nom" id="nom"><br>
             <p id="nomError" class="err"></p>
 
-            <label for="adressepostale">Entrez votre e-mail</label>
-            <input class="L1" type="email" name="adressepostale" id="adresse" placeholder="monadresse@mail.com" required><br>
+            <label for="adresseemail">Entrez votre e-mail</label>
+            <input class="L1" type="email" name="adresseemail" id="adresse" placeholder="monadresse@mail.com" required><br>
             <p id="adresseError" class="err"></p>
 
             <label for="adresse">Entrez votre adresse postale</label>
-            <textarea id="codepost" name="message" placeholder="Ville, Rue...." required></textarea>
+            <textarea id="adressepostale" name="message" placeholder="Ville, Rue...." required></textarea><br>
 
             <label for="codepostale">Entrez code postale</label>
             <textarea id="message" name="message" placeholder="06210" required></textarea>
-            <p id="codepostaleError" class="err"></p>
+            <p id="codepostaleError" class="err"></p><br>
 
             <label for="PassW" class="labelgray">Entrez votre mot de passe</label>
             <input type="password" name="PassW" id="PassW" required>
-            <input type="checkbox" id="showPassword"> 
-            <label for="showPassword">montre les caracteurs</label> 
-
             <p id="passError" class="err"></p>
             
-
             <label for="PassWc" class="labelgray">Confirmez votre mot de passe</label>
-            <input type="password" name="PassWc" id="PassWc" required> 
-            <input type="checkbox" id="showPasswordc"> 
-            <label for="showPasswordc">montre les caracteurs</label>
-            <p id="passWcError" class="err"></p>
-
+            <input type="password" name="PassWc" id="PassWc" required>
+            <p id="passWcError" class="err"></p> 
+           
             <button type="button" onclick="validateForm()">S'inscrire</button>	
         </form>
     </div>

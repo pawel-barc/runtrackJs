@@ -23,6 +23,8 @@ function validateForm() {
     // Validation du champs prénom
     if (prenom === "") {
         prenomError.textContent = "Le prenom est requis";
+    } else if (!/^[A-Za-z]+$/.test(prenom)) {
+        prenomError.textContent = "Le prenom doit contenir uniquement des lettres";
         document.getElementById("prenom").style.color = "red";
     } else if (prenom.length < 3) {
         prenomError.textContent = "Le prenom doit contenir au moins 3 lettres";
@@ -30,12 +32,13 @@ function validateForm() {
     } else {
         prenomError.textContent = "";
         document.getElementById("prenom").style.color = "green";
-
     }
 
     // Validation du champs nom
     if (nom === "") {
         nomError.textContent = "Le nom est requis";
+    } else if (!/^[A-Za-z]+$/.test(nom)) {
+        nomError.textContent = "Le nom doit contenir uniquement des lettres";
         document.getElementById("nom").style.color = "red";
     } else if(nom.length < 3){
         nomError.textContent = "Le nom doit contenir au moins 3 lettres";
@@ -43,17 +46,16 @@ function validateForm() {
     } else {
         nomError.textContent = "";
         document.getElementById("nom").style.color = "green";
-        document.getElementById("nom").style.fontSize = "15px";
     }
     // Validation du champs email
     if (email === "") {
         emailError.textContent = "L'adresse e-mail est requise";
-    
     }else if (!email.includes("@")){
         emailError.textContent = " Entrez votre email correctemment";
-        
+        document.getElementById("adresse").style.color = "red";
     } else {
         emailError.textContent = "";
+        document.getElementById("adresse").style.color = "green";
     }
 
     // Validation du champs code postale
@@ -66,8 +68,10 @@ function validateForm() {
     // Validation du code postale
     if (codepostale !== "" && !(/^\d{5}$/.test(codepostale))) {
         codepostaleError.textContent = "Le code postal doit contenir 5 chiffres";
+        document.getElementById("message").style.color = "red";
     } else {
         codepostaleError.textContent = "";
+        document.getElementById("message").style.color = "green";
     }
 
     // Validation du champs mot de passe
@@ -75,8 +79,10 @@ function validateForm() {
         passError.textContent = "Le mot de passe est requis";
     } else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
         passError.textContent = "Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial";
+        document.getElementById("PassW").style.color = "red";
     } else {
         passError.textContent = "";
+        document.getElementById("PassW").style.color = "green";
     }
     
 
@@ -85,8 +91,10 @@ function validateForm() {
         passWcError.textContent = "La confirmation du mot de passe est requise";
     } else if (password !== passwordConfirm) {
         passWcError.textContent = "Les mots de passe ne correspondent pas";
+        document.getElementById("PassWc").style.color = "red";
     } else {
         passWcError.textContent = "";
+        document.getElementById("PassWc").style.color = "green";
     }
 }
 
