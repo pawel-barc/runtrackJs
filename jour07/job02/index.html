@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    
+    <title>Job01</title>
+  </head>
+  <body class=" yellow lighten-4">
+    <header>
+      <nav>
+        <div class="nav-wrapper  purple lighten-5 ">
+          <ul id="nav-mobile" class="right hide-on-med-and-down ">
+              <li class="red lighten-5">
+              <a class="blue-text text-darken-2" href = "index.html">Acceuil</a>
+              </li>
+              <li class="red lighten-4">
+              <a class="blue-text text-darken-2" href="index.html">Inscription</a>
+              </li>
+              <li class="red lighten-3">
+              <a class="blue-text text-darken-2" href="index.html">Connection</a>
+              </li>
+              <li class="red lighten-2">
+                <a class="blue-text text-darken-2" href="index.html">Rechercher</a>
+              </li>
+            </ul> 
+          </div> 
+        </nav>
+       
+    </header>
+    <form action="formulaire">
+      <div class="genre">
+				<input type="radio" id="monsieur" name="civility" value="monsieur">
+        <label for="monsieur"> Monsieur</label><br>
+        <input type="radio" id="madame" name="civility" value="madame">
+        <label for="madame"> Madame</label><br>
+        <input type="radio" id="autre" name="civility" value="autre">
+        <label for="autre"> Autre</label><br>
+        <input type="submit" value="Submit">
+      </div>  
+			<div class="donné">
+				<label for="prenom"> Entrez votre prenom</label>
+				<input class="L1" type="text" name="prenom" id="prenom" ><br>
+				<label for="nom"> Entrez votre nom</label>
+				<input class="L1" type="text" name="nom" id="nom" ><br>
+        <label for="adresse">Entrez votre adresse postale</label>
+        <textarea id="adressepostale" name="message" placeholder="Ville, Rue...." required></textarea><br>
+        <label for="adressepostale"> Entrez votre email</label>
+				<input class="L1" type="adressepostale" name="adressepostale" id="adresse" placeholder= "monadresse@mail.com" required><br>
+				<label for="PassW" class="labelgray">Entrez votre mot de passe</label>
+        <input type="password" name="PassW" id="PassW" required>
+        <label for="PassWc" class="labelgray">Confirmez votre mot de passe</label>
+        <input type="password" name="PassWc" id="PassWc" required>
+			</div>
+      <div class = "passion">
+        <h2>Choisissez vos passions :</h2>
+        <input type="checkbox" id="informatique" name="informatique">
+        <label for="informatique"> Informatique</label><br>
+        <input type="checkbox" id="voyages" name="voyages">
+        <label for="voyages"> Voyages</label><br>
+        <input type="checkbox" id="sport" name="sport">
+        <label for="sport"> Sport</label><br>
+        <input type="checkbox" id="lecture" name="lecture">
+        <label for="lecture"> Lecture</label><br>
+      </div>
+      <input type="submit" value="Submit">  
+    </form>	
+    <footer>
+      <nav>
+        <div class="container">
+          <a href= "index.html"> Acceuil</a>
+          <a href= "Souspages/Entreprise.html"> Inscription</a>
+          <a href= "Souspages/Realisations.html"> Connection</a>
+          <a href= "Souspages/Contact.html"> Rechercher</a>
+        </div>
+      </nav>	
+    </footer>
+  </body>
+</html>
