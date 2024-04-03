@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +19,9 @@
     <header>
       <nav>
         <div class="nav-wrapper  purple lighten-5 ">
-          <a href="#!" class="brand-logo blue-text text-darken-2">Bienvenue à tous!</a>
+          <a href="https://materializecss.com/" class="brand-logo blue-text text-darken-2" style="margin-left: 5%;"><h4>Materialize souhaite à tous la bienvenue !</h4></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down ">
-              <li class="red lighten-5">
+              <li class="red lighten-5" >
               <a class="blue-text text-darken-2" href = "index.html">Acceuil</a>
               </li>
               <li class="red lighten-4">
@@ -29,24 +31,37 @@
               <a class="blue-text text-darken-2" href="index.html">Connection</a>
               </li>
               <li class="red lighten-2">
-                <a class="blue-text text-darken-2" href="index.html">Rechercher</a>
-              </li>
-            </ul> 
-          </div> 
-        </nav>
-       
+              <a class="blue-text text-darken-2" href="index.html">Rechercher</a>
+            </li>
+          </ul> 
+        </div> 
+      </nav>
     </header>
-    <form action="formulaire">
-      <div class="genre">
-				<input type="radio" id="monsieur" name="civility" value="monsieur">
-        <label for="monsieur"> Monsieur</label><br>
-        <input type="radio" id="madame" name="civility" value="madame">
-        <label for="madame"> Madame</label><br>
-        <input type="radio" id="autre" name="civility" value="autre">
-        <label for="autre"> Autre</label><br>
-        <input type="submit" value="Submit">
-      </div>  
-			<div class="donné">
+    <form action="formulaire"  style="margin: 2%;">
+      <p>Choisissez votre civilité</p>
+      <div class = "row">
+        <div class="col s2">
+          <label>
+            <input name="group1" type="radio" checked />
+            <span>Madamme</span> <i class="small material-icons">female</i>
+          </label>
+        </div>
+        <div class="col s2">
+          <label>
+            <input name="group1" type="radio" />
+            <span>Monsieur</span> <i class="small material-icons">male</i>
+          </label>
+        </div>
+        <div class="col s2">
+        <label>
+          <input class="with-gap" name="group1" type="radio"  />
+          <span>Autre</span><i class="small material-icons">help</i>
+        </label>
+      </div>
+    </div>
+      <div class="row" style="margin-top: 5%; padding: 4%;">
+        <div class="col s5 offset-s1">
+        <i class="small material-icons " style = "margin: 2%;">draw</i><h5>Entrez les données</h5><br>
 				<label for="prenom"> Entrez votre prenom</label>
 				<input class="L1" type="text" name="prenom" id="prenom" ><br>
 				<label for="nom"> Entrez votre nom</label>
@@ -54,24 +69,33 @@
         <label for="adresse">Entrez votre adresse postale</label>
         <textarea id="adressepostale" name="message" placeholder="Ville, Rue...." required></textarea><br>
         <label for="adressepostale"> Entrez votre email</label>
-				<input class="L1" type="adressepostale" name="adressepostale" id="adresse" placeholder= "monadresse@mail.com" required><br>
+				<input class="L1" type="adressepostale" name="adressepostale" id="adresse" placeholder= "monadresse@mail.com" required><i class="small material-icons " >mail</i><br><br>
 				<label for="PassW" class="labelgray">Entrez votre mot de passe</label>
         <input type="password" name="PassW" id="PassW" required>
         <label for="PassWc" class="labelgray">Confirmez votre mot de passe</label>
         <input type="password" name="PassWc" id="PassWc" required>
 			</div>
-      <div class = "passion">
-        <h4>Choisissez vos passions :</h4>
-        <input type="checkbox" id="informatique" name="informatique">
-        <label for="informatique"> Informatique</label><br>
-        <input type="checkbox" id="voyages" name="voyages">
-        <label for="voyages"> Voyages</label><br>
-        <input type="checkbox" id="sport" name="sport">
-        <label for="sport"> Sport</label><br>
-        <input type="checkbox" id="lecture" name="lecture">
-        <label for="lecture"> Lecture</label><br>
+      <div class = "col s5" style="padding-left: 10%;">
+        <i class="small material-icons " style = "margin: 4%;">battery_std</i><h5>Choisissez vos passions :</h5><br>
+        <label>
+          <input name="group1" type="radio" checked />
+          <span>Informatique</span><br><br>
+        </label>
+        <label>
+          <input name="group1" type="radio" checked />
+          <span>Voyages</span><br><br>
+        </label>
+        <label>
+          <input name="group1" type="radio" checked />
+          <span>Sport</span><br><br>
+        </label>
+        <label>
+          <input name="group1" type="radio" checked />
+          <span>Lecture</span>
+        </label>
       </div>
-      <input type="submit" value="Submit">  
+      </div>
+      <input style="margin-left: 50%;" type="submit" class="purple lighten-5" value="Submit">
     </form>	
     <footer class="page-footer  purple lighten-5 ">
       <div class="container">
@@ -82,8 +106,8 @@
               Our company is completely creative, clean and 100% responsive website. Put your business into next level with us.</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="blue-text text-darken-2 " style=" margin-left: 64%;" >Links</h5>
-            <ul style=" width: 40%;" class="right hide-on-med-and-down" >
+            <h5 class="blue-text text-darken-2 " style=" margin-left: 63%;" >Links</h5>
+            <ul style=" width: 50%;" class="right hide-on-med-and-down" >
               <li class="grey lighten-5 " style=" padding: 10px;" ><a class="blue-text text-darken-3 " href="index.html">Acceuil</a></li>
               <li class="grey lighten-4 " style=" padding: 10px;"><a class="blue-text text-darken-3" href="index.html">Inscription</a></li>
               <li class="grey lighten-3 " style=" padding: 10px;"><a class="blue-text text-darken-3" href="index.html">Connection</a></li>
@@ -96,6 +120,7 @@
         <div class="container blue-text text-darken-4">
         © 2024 Copyright Text
         <a class="black-text text-lighten-4 right" href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Wikipedia</a>
+        <i class="small material-icons " style="margin-left: 70%;" >language</i>
         </div>
       </div>
     </footer>
