@@ -1,0 +1,26 @@
+{
+    "utilisateurs": [
+      {
+        "id": 1,
+        "nom": "Étudiant",
+        "email": "pawel.barc@laplateforme.io",
+        "role": "Étudiant",
+        "password": "AAaa11!!"
+      },
+      {
+        "id": 2,
+        "nom": "Modérateur",
+        "email": "will.smith@laplateforme.io",
+        "role": "Modérateur",
+        "password": "AAaa11!!"
+      },
+      {
+        "id": 3,
+        "nom": "Administrateur",
+        "email": "robert.lewandowski@laplateforme.io",
+        "role": "Administrateur",
+        "password": "AAaa11!!"
+      }
+    ]
+  }
+  

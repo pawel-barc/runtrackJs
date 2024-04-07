@@ -95,3 +95,51 @@ document.getElementById("showPasswordc").addEventListener("change", function() {
         passwordInput.type = "password";
     }
 });
+
+document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    // Les données tapés par l'utilisateur seront telechargées 
+    var prenom = document.getElementById("prenom").value;
+    var nom = document.getElementById("nom").value;
+    var email = document.getElementById("adresse").value;
+    var password = document.getElementById("PassW").value;
+
+    // Creation d'objet d'utilisateur
+    var newUser = {
+        "prenom": prenom,
+        "nom": nom,
+        "email": email,
+        "password": password
+    };
+   
+$.getJSON("utilisateurs.json", function(data) {
+    // Iteration de tout les utilsateurs
+    $.each(data.utilisateurs, function(index, utilisateur) {
+        // Création d'élément d'un liste pour tout les utilisateurs
+        var listItem = $("<li>").text(utilisateur.nom + " - " + utilisateur.email + " - " + utilisateur.role);
+        // Ajoute un élément dans liste
+        $("#user-list").append(listItem);
+    });
+});
+
+
+    fetch('../json/utilisateurs.json', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        console.log("L'utilisateur a été enregistré:", data);
+        alert("Inscription réussie ! Vous pouvez maintenant vous connecter à votre compte");
+       
+    })
+    .catch((error) => {
+        console.error("Il y a eu une erreur lors de l'inscription de l'utilisateur:", error);
+        alert("Il y a eu une erreur lors de l'inscription de l'utilisateur. Veuillez réessayer plus tard.");
+    });
+});

@@ -3,93 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Administrateur</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.css" rel="stylesheet">
-    <title>Calendrier</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-warning bg-opacity-75 ">
-        <div class="container-fluid justify-content-center">
-            <button class="navbar-toggler bg-primary bg-opacity-75 pe-5 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>menu
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Acceuil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://laplateforme.io/bachelor-it/init-bachelor/"
-                            target="_blank">Bacheleor IT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://laplateforme.io/informations/" target="_blank">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </nav>
-    </header>
-      <div id="calendar"></div> 
-      <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="addEventModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addEventModalLabel">Ajouter un événement</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <script src="../js/script_administrateur.js" async ></script>
+</head>
+    <body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+        <header>
+            <div class=" bg-image py-5" style="background-image: url('https://laplateforme.io/wp-content/uploads/2024/02/logo-laplateforme-2024.png');"></div>
+            <nav class="navbar navbar-expand-sm bg-image py-2 mb-5">
+                <div class="container-fluid ">
+                    <button class="navbar-toggler bg-opacity-75 pe-5 " style="--bs-bg-opacity: .5;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>menu
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarNav">
+                        <ul class="navbar-nav container-fluid d-flex justify-content-between align-items-center">
+                            <li class="nav-item ">
+                                <a class="nav-link active  fw-bold text-primary " style="--bs-bg-opacity: .5;" aria-current="page" href="../index.html">Acceuil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary  fw-bold " style="--bs-bg-opacity: .5;" href="https://laplateforme.io/bachelor-it/init-bachelor/"
+                                    target="_blank">Bacheleor IT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary fw-bold " style="--bs-bg-opacity: .5;" href="https://laplateforme.io/informations/" target="_blank">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form id="eventForm">
-                        <div class="mb-3">
-                            <label for="eventTitle" class="form-label">Titre de l'événement</label>
-                            <input type="text" class="form-control" id="eventTitle" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="eventStart" class="form-label">Date de début</label>
-                            <input type="datetime-local" class="form-control" id="eventStart" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="eventEnd" class="form-label">Date de fin</label>
-                            <input type="datetime-local" class="form-control" id="eventEnd" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Ajouter</button>
-                    </form>
+            </nav>
+        </header>
+        <div class="container mt-5">
+            <h2>Liste des Utilisateurs</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                </tbody>
+            </table>
+        </div>
+        <footer class="text-white py-4 mt-4"  style="--bs-bg-opacity: .5;">
+            <div class="container">
+                <div class="row text-center align-items-center">
+                    <div class="col-md-4">
+                        <h5>Qui sommes-nous?</h5>
+                        <p>La Plateforme_ est une école du numérique et des nouvelles technologies co-fondée avec le Club Top 20 réunissant les grandes entreprises de la Métropole Aix Marseille.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Les liens</h5>
+                        <ul class="list-unstyled">
+                            <li ><a class="text-white" href="../index.html">Home</a></li>
+                            <li><a class="text-white" href="https://laplateforme.io/bachelor-it/init-bachelor/">Bacheleor IT</a></li>
+                            <li><a class="text-white" href="https://laplateforme.io/informations/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contactactez-nous</h5>
+                        <ul class="list-unstyled">
+                            <li>8 rue d’hozier</li>
+                            <li>Marseille</li>
+                            <li>contact@laplateforme.io</li>
+                            <li>Tel : 04.84.89.43.69</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer class="bg-warning bg-opacity-75 text-white py-4 mt-4">
-      <div class="container">
-          <div class="row text-center align-items-center">
-              <div class="col-md-4">
-                  <h5>Qui sommes-nous?</h5>
-                  <p>La Plateforme_ est une école du numérique et des nouvelles technologies co-fondée avec le Club Top 20 réunissant les grandes entreprises de la Métropole Aix Marseille.</p>
-              </div>
-              <div class="col-md-4">
-                  <h5>Les liens</h5>
-                  <ul class="list-unstyled">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="https://laplateforme.io/bachelor-it/init-bachelor/">Bacheleor IT</a></li>
-                      <li><a href="https://laplateforme.io/informations/">Contact</a></li>
-                  </ul>
-              </div>
-              <div class="col-md-4">
-                  <h5>Contactactez-nous</h5>
-                  <ul class="list-unstyled">
-                      <li>8 rue d’hozier</li>
-                      <li>Marseille</li>
-                      <li>contact@laplateforme.io</li>
-                      <li>Tel : 04.84.89.43.69</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="../js/script_calendar.js"></script>
-  </body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </body>
 </html>
